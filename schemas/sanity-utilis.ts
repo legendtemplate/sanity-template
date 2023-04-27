@@ -17,6 +17,7 @@ export async function getProjects(): Promise<Project[]> {
   )
 }
 
+
 export async function getProject(slug: string): Promise<Project> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "author" && slug.current == $slug][0]{
